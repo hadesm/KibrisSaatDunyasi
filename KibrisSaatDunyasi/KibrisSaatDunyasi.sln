@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KibrisSaatDunyasi.DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KibrisSaatDunyasi.UI", "KibrisSaatDunyasi.UI\KibrisSaatDunyasi.UI.csproj", "{DFBFF288-FF3D-4F84-8FF2-B1F6C40668AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KibrisSaatDunyasi.DataAccess.InMemory", "KibrisSaatDunyasi.DataAccess.InMemory\KibrisSaatDunyasi.DataAccess.InMemory.csproj", "{B4284CB9-0DB6-4226-853A-409EA6219D62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DFBFF288-FF3D-4F84-8FF2-B1F6C40668AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBFF288-FF3D-4F84-8FF2-B1F6C40668AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBFF288-FF3D-4F84-8FF2-B1F6C40668AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4284CB9-0DB6-4226-853A-409EA6219D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4284CB9-0DB6-4226-853A-409EA6219D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4284CB9-0DB6-4226-853A-409EA6219D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4284CB9-0DB6-4226-853A-409EA6219D62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

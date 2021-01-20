@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{137A4D7F-0FF0-405D-8610-CD67408A026D}</ProjectGuid>
+    <ProjectGuid>{B4284CB9-0DB6-4226-853A-409EA6219D62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KibrisSaatDunyasi.Core</RootNamespace>
-    <AssemblyName>KibrisSaatDunyasi.Core</AssemblyName>
+    <RootNamespace>KibrisSaatDunyasi.DataAccess.InMemory</RootNamespace>
+    <AssemblyName>KibrisSaatDunyasi.DataAccess.InMemory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KibrisSaatDunyasi.Core\KibrisSaatDunyasi.Core.csproj">
+      <Project>{137a4d7f-0ff0-405d-8610-cd67408a026d}</Project>
+      <Name>KibrisSaatDunyasi.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
