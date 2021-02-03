@@ -22,6 +22,9 @@ namespace KibrisSaatDunyasi.DataAccess.InMemory
                 products = new List<Product>();
             }
         }
+
+       
+
         public void Commit()
         {
             cache["products"] = products;
@@ -66,6 +69,10 @@ namespace KibrisSaatDunyasi.DataAccess.InMemory
             {
                 throw new Exception("Ürün bulunamadı");
             }
+        }
+        public IQueryable<Product> Collection()
+        {
+            return products.AsQueryable();
         }
     }
 }

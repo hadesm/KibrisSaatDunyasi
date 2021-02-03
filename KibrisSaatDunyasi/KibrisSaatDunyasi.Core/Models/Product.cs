@@ -10,11 +10,14 @@ namespace KibrisSaatDunyasi.Core.Models
     {
         public string productid { get; set; }
         public string productname { get; set; }
-        public string category { get; set; }
-        public string description { get; set; }
-        public string image { get; set; }
+        public string catid { get; set; }
+        public string descript { get; set; }
+        public string img { get; set; }
         public decimal price { get; set; }
         public string brand { get; set; }
+        public Boolean Kadın { get; set; }
+        public Boolean Erkek { get; set; }
+      
 
         public Product()
         {

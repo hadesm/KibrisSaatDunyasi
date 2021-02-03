@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,6 +163,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -179,6 +182,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KibrisSaatDunyasi.Core\KibrisSaatDunyasi.Core.csproj">
+      <Project>{137a4d7f-0ff0-405d-8610-cd67408a026d}</Project>
+      <Name>KibrisSaatDunyasi.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KibrisSaatDunyasi.DataAccess.InMemory\KibrisSaatDunyasi.DataAccess.InMemory.csproj">
+      <Project>{b4284cb9-0db6-4226-853a-409ea6219d62}</Project>
+      <Name>KibrisSaatDunyasi.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KibrisSaatDunyasi.DataAccess.SQL\KibrisSaatDunyasi.DataAccess.SQL.csproj">
+      <Project>{cd310244-712b-4928-879d-f00f690c3e19}</Project>
+      <Name>KibrisSaatDunyasi.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KibrisSaatDunyasi.Services\KibrisSaatDunyasi.Services.csproj">
+      <Project>{3792e9bf-298e-4943-afcd-b97f863455cb}</Project>
+      <Name>KibrisSaatDunyasi.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
