@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KibrisSaatDunyasi.Core.Models
 {
-   public class ProductCat
+   public class ProductCat : BaseEntity
     {
-        public string catid { get; set; }
-        public string name { get; set; }
+       
+        public string catname { get; set; }
 
-        public ProductCat()
-        {
-            this.catid = Guid.NewGuid().ToString();
-        }
+        
     }
 }
