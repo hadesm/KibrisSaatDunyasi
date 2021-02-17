@@ -35,7 +35,7 @@ namespace KibrisSaatDunyasi.DataAccess.InMemory
         }
         public void Update(Product product)
         {
-            Product productToUpdate = products.Find(p => p.productid == product.productid);
+            Product productToUpdate = products.Find(p => p.Id == product.Id);
             if(productToUpdate != null)
             {
                 productToUpdate = product;
@@ -47,7 +47,7 @@ namespace KibrisSaatDunyasi.DataAccess.InMemory
         }
         public Product Find(string id)
         {
-            Product product = products.Find(p => p.productid == id);
+            Product product = products.Find(p => p.Id == id);
             if (product != null)
             {
                 return product;
@@ -60,7 +60,7 @@ namespace KibrisSaatDunyasi.DataAccess.InMemory
 
         public void Delete(string id)
         {
-            Product productToDelete = products.Find(p => p.productid == id);
+            Product productToDelete = products.Find(p => p.Id == id);
             if (productToDelete != null)
             {
                 products.Remove(productToDelete);

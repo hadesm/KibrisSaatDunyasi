@@ -23,10 +23,10 @@ namespace KibrisSaatDunyasi.Core.Models
         public Boolean Kadın { get; set; }
         public Boolean Erkek { get; set; }
         public Boolean Unisex { get; set; }
-      
 
-       
 
-   
+
+
+
     }
 }
