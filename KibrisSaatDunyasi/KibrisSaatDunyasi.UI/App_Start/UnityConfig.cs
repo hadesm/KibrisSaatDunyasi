@@ -1,6 +1,7 @@
 using KibrisSaatDunyasi.Core.Contracts;
 using KibrisSaatDunyasi.Core.Models;
 using KibrisSaatDunyasi.DataAccess.InMemory;
+using KibrisSaatDunyasi.DataAccess.SQL;
 using System;
 
 using Unity;
@@ -45,8 +46,8 @@ namespace KibrisSaatDunyasi.UI
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IRepository<Product>, InMemoryRepository<Product>>();
-            container.RegisterType<IRepository<ProductCat>, InMemoryRepository<ProductCat>>();
+            container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
+            container.RegisterType<IRepository<ProductCat>, SQLRepository<ProductCat>>();
 
         }
     }

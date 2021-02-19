@@ -13,7 +13,7 @@ namespace KibrisSaatDunyasi.DataAccess.SQL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202102121345341_Initial"; }
+            get { return "202102191843288_Initial"; }
         }
         
         string IMigrationMetadata.Source

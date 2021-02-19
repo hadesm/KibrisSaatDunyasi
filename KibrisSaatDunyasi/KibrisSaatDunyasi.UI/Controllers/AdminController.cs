@@ -12,11 +12,11 @@ namespace KibrisSaatDunyasi.UI.Controllers
     {
         IRepository<Product> context;
         IRepository<ProductCat> pcontext;
-
-        public AdminController(IRepository<Product> context, IRepository<ProductCat> productcategories)
+        
+        public AdminController(IRepository<Product> context, IRepository<ProductCat> pcontext)
         {
             this.context = context;
-            this.pcontext = productcategories;
+            this.pcontext = pcontext;
         }
         // GET: Admin
         public ActionResult Index()
@@ -33,6 +33,50 @@ namespace KibrisSaatDunyasi.UI.Controllers
         {
             List<ProductCat> productcat = pcontext.Collection().ToList();
             return View(productcat);
+        }
+
+        public ActionResult CreateProduct()
+        {
+            Product pro = new Product();
+            return View(pro);
+        }
+        [HttpPost]
+        public ActionResult CreateProduct(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(product);
+            } else 
+            {
+                context.Insert(product);
+                context.Commit();
+            }
+
+            return RedirectToAction("Products");
+        }
+        public ActionResult CreateProductCat()
+        {
+            ProductCat productCat = new ProductCat();
+
+            return View(productCat);
+        }
+        [HttpPost]
+        public ActionResult CreateProductCat(ProductCat productCat,string name)
+        {
+            
+            
+            if (!ModelState.IsValid )
+            {
+                return View(productCat);
+            }
+            else
+            {
+                pcontext.Insert(productCat);
+                pcontext.Commit();
+                return RedirectToAction("ProductCats");
+            }
+
+            
         }
     }
 }

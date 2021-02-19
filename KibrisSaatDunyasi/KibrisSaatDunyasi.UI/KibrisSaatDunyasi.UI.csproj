@@ -297,6 +297,8 @@
     <Content Include="Views\ProductCat\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Products.cshtml" />
+    <Content Include="Views\Admin\CreateProduct.cshtml" />
+    <Content Include="Views\Admin\CreateProductCat.cshtml" />
     <Content Include="Views\Admin\ProductCats.cshtml" />
   </ItemGroup>
   <ItemGroup>

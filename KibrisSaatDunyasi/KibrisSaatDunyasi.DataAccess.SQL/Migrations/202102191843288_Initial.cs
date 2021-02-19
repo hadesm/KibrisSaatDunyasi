@@ -11,18 +11,19 @@
                 "dbo.ProductCats",
                 c => new
                     {
-                        catid = c.String(nullable: false, maxLength: 128),
-                        name = c.String(),
+                        Id = c.String(nullable: false, maxLength: 128),
+                        catname = c.String(),
+                        createdat = c.DateTimeOffset(nullable: false, precision: 7),
                     })
-                .PrimaryKey(t => t.catid);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Products",
                 c => new
                     {
-                        productid = c.String(nullable: false, maxLength: 128),
+                        Id = c.String(nullable: false, maxLength: 128),
                         productname = c.String(),
-                        catid = c.String(),
+                        catname = c.String(),
                         descript = c.String(),
                         img = c.String(),
                         price = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -30,8 +31,9 @@
                         Kadın = c.Boolean(nullable: false),
                         Erkek = c.Boolean(nullable: false),
                         Unisex = c.Boolean(nullable: false),
+                        createdat = c.DateTimeOffset(nullable: false, precision: 7),
                     })
-                .PrimaryKey(t => t.productid);
+                .PrimaryKey(t => t.Id);
             
         }
         

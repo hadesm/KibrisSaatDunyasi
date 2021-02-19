@@ -40,7 +40,9 @@ namespace KibrisSaatDunyasi.DataAccess.SQL
 
         public T Find(string Id)
         {
+          
             return dbSET.Find(Id);
+
         }
 
         public void Insert(T t)
