@@ -133,8 +133,8 @@ namespace KibrisSaatDunyasi.UI.Controllers
             }
             else
             {
-                pcontext.Delete(Id);
-                pcontext.Commit();
+                context.Delete(Id);
+                context.Commit();
             }
             return RedirectToAction("Products");
         }
