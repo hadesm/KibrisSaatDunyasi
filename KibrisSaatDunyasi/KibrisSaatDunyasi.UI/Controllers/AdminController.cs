@@ -78,9 +78,21 @@ namespace KibrisSaatDunyasi.UI.Controllers
 
             
         }
+        [ActionName("Delete")]
+        public ActionResult PcatDelete(string Id)
+        {
+            ProductCat procatdel = pcontext.Find(Id);
+            if(procatdel == null)
+            {
+                return HttpNotFound();
+            }else
+            {
+                return View(procatdel);
+            }
+        }
         [HttpPost]
         [ActionName("Delete")]
-        public ActionResult ConfirmDelete(string Id)
+        public ActionResult CatConfirmDelete(string Id)
         {
             ProductCat proCatDel = pcontext.Find(Id);
             if (proCatDel == null)
@@ -90,9 +102,41 @@ namespace KibrisSaatDunyasi.UI.Controllers
             }
             else
             {
+                pcontext.Delete(Id);
+                pcontext.Commit();
+            }
+            return RedirectToAction("ProductCats");
+        }
+
+        [ActionName("Delete")]
+        public ActionResult ProDelete(string Id)
+        { 
+            Product procatdel = context.Find(Id);
+            if (procatdel == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(procatdel);
+            }
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult ConfirmDelete(string Id)
+        {
+            Product proCatDel = context.Find(Id);
+            if (proCatDel == null)
+            {
+                return HttpNotFound();
 
             }
-
+            else
+            {
+                pcontext.Delete(Id);
+                pcontext.Commit();
+            }
+            return RedirectToAction("Products");
         }
         public ActionResult ProductEdit()
         {

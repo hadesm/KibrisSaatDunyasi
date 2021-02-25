@@ -304,6 +304,7 @@
     <Content Include="Views\Admin\CreateProductCat.cshtml" />
     <Content Include="Views\Admin\ProductEdit.cshtml" />
     <Content Include="Views\Admin\ProductCatEdit.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
