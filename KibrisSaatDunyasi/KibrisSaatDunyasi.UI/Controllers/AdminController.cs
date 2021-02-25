@@ -61,7 +61,7 @@ namespace KibrisSaatDunyasi.UI.Controllers
             return View(productCat);
         }
         [HttpPost]
-        public ActionResult CreateProductCat(ProductCat productCat,string name)
+        public ActionResult CreateProductCat(ProductCat productCat)
         {
             
             
@@ -77,6 +77,30 @@ namespace KibrisSaatDunyasi.UI.Controllers
             }
 
             
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult ConfirmDelete(string Id)
+        {
+            ProductCat proCatDel = pcontext.Find(Id);
+            if (proCatDel == null)
+            {
+                return HttpNotFound();
+            
+            }
+            else
+            {
+
+            }
+
+        }
+        public ActionResult ProductEdit()
+        {
+            return View();
+        }
+        public ActionResult ProductCatEdit()
+        {
+            return View();
         }
     }
 }
